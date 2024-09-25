@@ -11,13 +11,19 @@ public class FrontPiece {
 
     // Method to return a new array with the first 2 elements of the given array
     public static int[] frontPiece(int[] nums) {
-        // If the array has fewer than 2 elements, return a copy of the whole array
+        // If the array has fewer than 2 elements, return the array as is
         if (nums.length < 2) {
             return nums;
         }
 
-        // Otherwise, return a new array containing the first 2 elements
-        return Arrays.copyOf(nums, 2);
+        //create a new array of size 2
+        int[] result = new int[2];
+        result[0] = nums[0];
+        result[0] = nums[1];
+
+        return result;
+
+
     }
 }
 
