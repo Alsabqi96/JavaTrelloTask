@@ -2,46 +2,31 @@ import java.util.Stack;
 
 public class ReverseStringUsingStack {
 
-    public static String ReverseStringUsingStack(String input) {
-        Stack<Character> stack = new Stack<>(); //Create stack to hold characters
+    public static void main(String[] args) {
+        String input = "hello";
+        String reversed = reverseString(input);
+        System.out.println("Original String: " + input);
+        System.out.println("Reversed String: " + reversed);
+    }
 
-        // Step 1: Push all characters of the string onto the stack
-        for (char c : input.toCharArray()) {
+    // Function to reverse the string using a stack
+    public static String reverseString(String str) {
+        Stack<Character> stack = new Stack<>();
+
+        // Push each character of the string onto the stack
+        for (char c : str.toCharArray()) {
             stack.push(c);
         }
 
-        // This function to build the Reversed String
+        // Pop characters from the stack and build the reversed string
         StringBuilder reversed = new StringBuilder();
-
-        // Step 2: I Pop characters from the stack
         while (!stack.isEmpty()) {
             reversed.append(stack.pop());
         }
-        return reversed.toString(); //Retern the reversed string
-    }
-    public static void main(String[] args) {
-        // Example Inputs
-        String original = "hello";
 
-
-        // Reversing the strings
-        String reversed = reverseString(original);
-
-
-        // Displaying the results
-        System.out.println("Original: " + original);
-        System.out.println("Reversed: " + reversed);
-        System.out.println();
-
-
+        return reversed.toString(); // Return the reversed string
     }
 }
-
-
-
-
-
-
 
 
 
