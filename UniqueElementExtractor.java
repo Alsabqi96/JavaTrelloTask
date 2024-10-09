@@ -5,26 +5,26 @@ import java.util.Set;
 
 public class UniqueElementExtractor {
 
-    // First I put example input array
-    // I use a function to get unique elements
-    // I display the result
-    // I write function to extract unique elements from an array
-    // I use a set to filter out duplicate elements
-    // After that I add each element of the array to the set
-    // Final step is to convert the set to a list and return it
-
     public static void main(String[] args) {
-        int[] inputArray = {1, 2, 3, 2, 1};
-        List<Integer> uniqueElements = getUniqueElements(inputArray);
-        System.out.println("Unique elements: " + uniqueElements);
+
+        List<Integer> inputList = new ArrayList<>(); // First I put inputs ArrayList
+        inputList.add(1);
+        inputList.add(2);
+        inputList.add(3);
+        inputList.add(2);
+        inputList.add(1);
+
+
+        List<Integer> uniqueElements = getUniqueElements(inputList); // I write a function to get a Unique Elements
+        System.out.println("Unique elements: " + uniqueElements); // This is Function to Display the Result
     }
 
-    public static List<Integer> getUniqueElements(int[] arr) {
-        Set<Integer> uniqueSet = new HashSet<>();
-        for (int num : arr) {
-            uniqueSet.add(num);
-        }
+    // Function to extract unique elements from a list
+    public static List<Integer> getUniqueElements(List<Integer> list) {
+        // Use a Set to filter out duplicate elements
+        Set<Integer> uniqueSet = new HashSet<>(list);
 
+        // Convert the set back to a list and return
         return new ArrayList<>(uniqueSet);
     }
 }
