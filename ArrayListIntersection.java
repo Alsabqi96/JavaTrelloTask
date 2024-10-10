@@ -56,7 +56,9 @@ public class ArrayListIntersection {
             }
         }
 
-        // Convert the intersection set to a list and return it
-        return new ArrayList<>(intersectionSet);
+        // I create a new ArrayList and I  add all elements from the intersectionSet
+        List<Integer> result = new ArrayList<>();
+        result.addAll(intersectionSet);
+        return result;
     }
 }
