@@ -9,20 +9,20 @@ public class MapShare {
         map1.put("a", "aaa");
         map1.put("b", "bbb");
         map1.put("c", "ccc");
-        System.out.println(mapShare(map1)); // → {"a": "aaa", "b": "aaa"}
+        System.out.println(mapShare(map1));
 
         // Test case 2
         Map<String, String> map2 = new HashMap<>();
         map2.put("b", "xyz");
         map2.put("c", "ccc");
-        System.out.println(mapShare(map2)); // → {"b": "xyz"}
+        System.out.println(mapShare(map2));
 
         // Test case 3
         Map<String, String> map3 = new HashMap<>();
         map3.put("a", "aaa");
         map3.put("c", "meh");
         map3.put("d", "hi");
-        System.out.println(mapShare(map3)); // → {"a": "aaa", "b": "aaa", "d": "hi"}
+        System.out.println(mapShare(map3)); 
     }
 
     public static Map<String, String> mapShare(Map<String, String> map) {
