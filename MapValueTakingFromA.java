@@ -1,33 +1,36 @@
 import java.util.HashMap;
 import java.util.Map;
-
 public class MapValueTakingFromA {
     public static void main(String[] args) {
+        // Example usage of the mapBully method
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "candy");
+        map.put("b", "dirt");
+        map.put("c", "meh");
 
-        // Initialize a map with character keys and string values
-        Map<Character, String> lettersRepresentation = new HashMap<>();
-        lettersRepresentation.put('n', "nnn");
-        lettersRepresentation.put('b', "bbb");
-        lettersRepresentation.put('c', "ccc");
-        lettersRepresentation.put('a', "www");
-        System.out.println("Map before modification: " + lettersRepresentation);
+        System.out.println("Original map: " + map);
 
-        // Call the method to update the map
-        updateMapWithAValue(lettersRepresentation);
+        // Modify the map using mapBully
+        Map<String, String> modifiedMap = mapBully(map);
+
+        // Display the modified map
+        System.out.println("Modified map: " + modifiedMap);
     }
 
-    public static void updateMapWithAValue(Map<Character, String> lettersRepresentation) {
-        // Check if both 'b' and 'a' exist in the map
-        if (lettersRepresentation.containsKey('b') && lettersRepresentation.containsKey('a')) {
-            // Set the value of 'b' to the value of 'a'
-            lettersRepresentation.put('b', lettersRepresentation.get('a'));
-            // Set the value of 'a' to an empty string
-            lettersRepresentation.put('a', "");
-            System.out.println("Map after modification: " + lettersRepresentation);
-        } else {
-            // If 'b' or 'a' doesn't exist in the map, no modification is made
-            System.out.println("There is no modification");
+    // Method to modify the map as specified
+    public static Map<String, String> mapBully(Map<String, String> map) {
+        // Check if the key "a" exists in the map
+        if (map.containsKey("a")) {
+            // Transfer the value from "a" to "b"
+            map.put("b", map.get("a"));
+            // Clear the value of "a"
+            map.put("a", "");  
         }
+
+        //Use this to Return the modified map
+        return map;
     }
-}
+
+
+    }
 
