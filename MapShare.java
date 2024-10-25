@@ -4,34 +4,30 @@ import java.util.Map;
 public class MapShare {
 
     public static void main(String[] args) {
-        // Test case 1
-        Map<String, String> map1 = new HashMap<>();
-        map1.put("a", "aaa");
-        map1.put("b", "bbb");
-        map1.put("c", "ccc");
-        System.out.println(mapShare(map1));
+        // Initialize a single HashMap with initial key-value pairs
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "aaa");
+        map.put("b", "bbb");
+        map.put("c", "ccc");
 
-        // Test case 2
-        Map<String, String> map2 = new HashMap<>();
-        map2.put("b", "xyz");
-        map2.put("c", "ccc");
-        System.out.println(mapShare(map2));
+        // Print the original map contents
+        System.out.println("Original map: " + map);
 
-        // Test case 3
-        Map<String, String> map3 = new HashMap<>();
-        map3.put("a", "aaa");
-        map3.put("c", "meh");
-        map3.put("d", "hi");
-        System.out.println(mapShare(map3)); 
+        // Modify the map according to the mapShare rules by calling the mapShare method
+        mapShare(map);
+
+        // Print the modified map after applying the mapShare changes
+        System.out.println("Modified map: " + map);
     }
 
+    // mapShare method to modify the given map based on specific rules
     public static Map<String, String> mapShare(Map<String, String> map) {
-        // If key "a" has a value, set key "b" to the same value as "a"
-        if (map.containsKey("a") && map.get("a") != null) {
+        // Check if the map contains a key "a"
+        if (map.containsKey("a")) {
+            // Set the value of key "b" to be the same as the value of key "a"
             map.put("b", map.get("a"));
         }
-
-        // Remove key "c" from the map
+        // Remove the key "c" from the map if it exists
         map.remove("c");
 
         // Return the modified map
