@@ -3,8 +3,7 @@ public class BunnyEars {
         System.out.println("bunnyEars2(0) → " + bunnyEars2(0));
         System.out.println("bunnyEars2(1) → " + bunnyEars2(1));
         System.out.println("bunnyEars2(2) → " + bunnyEars2(2));
-        System.out.println("bunnyEars2(3) → " + bunnyEars2(3));
-        System.out.println("bunnyEars2(4) → " + bunnyEars2(4));
+        
     }
 
     public static int bunnyEars2(int bunnies) {
