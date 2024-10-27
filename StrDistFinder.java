@@ -1,8 +1,8 @@
 public class StrDistFinder {
     public static void main(String[] args) {
-        System.out.println(strDist("catcowcat", "cat")); //
-        System.out.println(strDist("catcowcat", "cow")); //
-        System.out.println(strDist("cccatcowcatxx", "cat")); //
+        System.out.println(strDist("catcowcat", "cat"));
+        System.out.println(strDist("catcowcat", "cow"));
+        System.out.println(strDist("cccatcowcatxx", "cat")); 
     }
 
     public static int strDist(String str, String sub) {
@@ -26,7 +26,7 @@ public class StrDistFinder {
             return strDist(str.substring(0, str.length() - 1), sub);
         }
 
-        return 0; 
+        return 0;
     }
 }
 
